@@ -1,8 +1,8 @@
-import { useState, useEffect, useContext, createContext } from "react";
-import { getAllCharacters, getSearchCharacter } from "../utils/getCharacter";
-export const CharacterContext = createContext();
+import { useState, useEffect, useRef, createContext } from "react";
+import { getAllCharacters } from "../utils/getCharacter";
+const CharacterContext = createContext({});
 
-function CharacterContextProvider({ children }) {
+export function CharacterProvider({ children }) {
   const [character, setCharacter] = useState([]);
   const [page, setPage] = useState(1);
   const inputSearch = useRef(null);
@@ -11,7 +11,7 @@ function CharacterContextProvider({ children }) {
     getAllCharacters(page).then(setCharacter);
   }, [page]);
   return (
-    <CharacterContextProvider
+    <CharacterContext.Provider
       value={{
         character,
         setCharacter,
@@ -23,7 +23,7 @@ function CharacterContextProvider({ children }) {
       }}
     >
       {children}
-    </CharacterContextProvider>
+    </CharacterContext.Provider>
   );
 }
-export default CharacterContextProvider;
+export default CharacterContext;
