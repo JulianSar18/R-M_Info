@@ -36,7 +36,6 @@
     .NavContent a{
         text-decoration: none;      
     }
-
     
 }
 @media (min-width: 40.626em) {
@@ -85,5 +84,13 @@
         border: 1px solid var(--primaryColor);
         border-radius: 0.5em;
         padding: 2px;
+    }
+    .NavContent a:visited{
+        text-decoration: none; 
+        color: var(--primaryColor);  
+    }
+    .NavContent a:hover{
+        text-decoration: none; 
+        color: var(--complementaryColor);  
     }
 }

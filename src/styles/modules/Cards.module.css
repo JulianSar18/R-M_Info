@@ -72,7 +72,47 @@
         transition-delay: 0s;
 
     }
-.containerInfo{
-    margin-left: 1em;
-}
+    .containerInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 1.3rem;
+        gap: 0.5em;
+        color: var(--primaryTextColor);
+    }
+    .status{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        justify-content: start;
+    }
+    .iconAlive{
+        margin-top: 5.3px;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 0.3em;
+        background: greenyellow;
+    }
+    .iconDead{
+        margin-top: 5.3px;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 0.3em;
+        background: red;
+    }
+    .iconUnknown{
+        margin-top: 5.3px;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 0.3em;
+        background: rgb(165, 165, 165);
+    }
+    .infoText{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .infoText h2, h4 {
+        margin-top: 0.5em;
+    }
 }
