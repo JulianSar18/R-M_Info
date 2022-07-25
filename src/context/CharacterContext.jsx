@@ -5,10 +5,11 @@ const CharacterContext = createContext({});
 export function CharacterProvider({ children }) {
   const [character, setCharacter] = useState([]);
   const [page, setPage] = useState(1);
+  const [errorState, setErrorState] = useState(false);
   const inputSearch = useRef(null);
   const [textSearch, setTextSearch] = useState("");
   useEffect(() => {
-    getAllCharacters(page).then(setCharacter);
+    getAllCharacters(page, textSearch).then(setCharacter);
   }, [page]);
   return (
     <CharacterContext.Provider
@@ -17,6 +18,8 @@ export function CharacterProvider({ children }) {
         setCharacter,
         page,
         setPage,
+        errorState,
+        setErrorState,
         inputSearch,
         textSearch,
         setTextSearch,

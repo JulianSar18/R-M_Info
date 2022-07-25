@@ -1,30 +1,78 @@
-.containerCard{
-    margin: 30px;
-    min-width: 100%;
+@media (max-width: 37.5em) {
+    .containerInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        color: var(--primaryTextColor);
+    }
+    .infoText  h2, h4 {
+        margin: 0.5em;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        background: var(--secondaryColor);
+        margin-top: 1em;
+        border-radius: 1.5rem;
+        text-align: center;
+    }
+    .card img{
+        border-radius: 1.5rem 1.5rem 0 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease 0s;    
+    }
+    .status{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        justify-content: center;
+    }
+    .iconAlive{
+        margin-top: 5.3px;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 0.3em;
+        background: greenyellow;
+    }
+    .iconDead{
+        margin-top: 5.3px;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 0.3em;
+        background: red;
+    }
+    .iconUnknown{
+        margin-top: 5.3px;
+        height: 0.5rem;
+        width: 0.5rem;
+        border-radius: 0.3em;
+        background: rgb(165, 165, 165);
+    }
 }
-.card{
-    height: 220px;
-    width: 600px;
-    display: flex;
-    justify-content: stretch;
-    background: var(--secondaryColor);
-    border-radius: 0.75rem;
-}
-.cardImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    border-radius: 0.75rem 0rem 0rem 0.75rem;
-}
+@media (min-width: 37.5em) {
+    .card{
+        display: flex;
+        height: 16em ;
+        flex-direction: row;
+        background: var(--secondaryColor);
+        margin-top: 1em;
+        border-radius: 1.5rem;
+    }
+    .card img{
+        border-radius: 1.5rem 0 0 1.5rem ;
+        max-width: 30em ;
+        height: 100%; 
+        object-position: center;
+        object-fit: cover;
+        transition-property:opacity 0.5s ease 0s;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+
+    }
 .containerInfo{
-    position: relative;
-    margin-left: 30px;
-    width: 50%;
-    height: 100%;
-    margin-top: -10px;
-    color: var(--primaryTextColor) ;
+    margin-left: 1em;
 }
-
-
-
+}
